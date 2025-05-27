@@ -48,6 +48,7 @@ h3{font-size: 28px;}
 h4{font-size: 24px;}
 h5{font-size: 20px;}
 h6{font-size: 16px;}
+p{font-size: 18px;}
 
 .s1{
     background-color: var(--mainColor);
@@ -62,15 +63,17 @@ h6{font-size: 16px;}
 }
 
 .main-container{
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .greeting-wrapper{
     display: grid;
     text-align: center;
     align-content: center;
-    min-height: 10em;
 }
 
 .intro-wrapper{
@@ -98,10 +101,6 @@ h6{font-size: 16px;}
     justify-content: space-between;
     align-items: center;
     background-color: var(--mainColor);
-}
-
-#navigation a{
-    color: var(--mainText);
 }
 
 #navigation{
@@ -148,6 +147,14 @@ h6{font-size: 16px;}
     grid-area: left-column;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.right-column{
+    grid-area: right-column;
+    display: grid;
+    align-content: center;
+    padding-left: 64px;
+    padding-bottom: 128px;
 }
 
 #profile_pic{
@@ -201,18 +208,9 @@ h6{font-size: 16px;}
 }
 
 #settings-note{
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
     text-align: center;
-}
-
-.right-column{
-    grid-area: right-column;
-    display: grid;
-    align-content: center;
-
-    padding-top: 50px;
-    padding-bottom: 80px;
 }
 
 #preview-shadow{
@@ -227,7 +225,7 @@ h6{font-size: 16px;}
     width: 300px;
     border: 1.5px solid #17a2b8;
     background-color: var(--previewBg);
-    padding: 15px;
+    padding: 16px;
     position: relative;
 }
 
@@ -262,10 +260,8 @@ h6{font-size: 16px;}
 
 .about-wrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    padding-bottom: 50px;
-    padding-top: 50px;
-    gap: 100px;
+    grid-template-columns: repeat(1, minmax(400px, 1fr));
+    padding: 32px 0;
 }
 
 #skills{
@@ -281,16 +277,12 @@ h6{font-size: 16px;}
 
 }
 
-#social_img{
-    width: 100%;
-}
-
 .post-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, 320px);
-    gap: 20px;
+    gap: 16px;
     justify-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 32px;
 }
 
 .post{
@@ -321,57 +313,39 @@ h6{font-size: 16px;}
 .post-intro{
     min-height: 80px;
     color: #4b5156;
-    font-size: 15px;
 }
 
-#contact-form{
-    display: block;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid var(--borderColor);
-    padding: 15px;
-    border-radius: 5px;
-    background-color: var(--mainColor);
-    margin-bottom: 50px;
-}
+@media screen and (max-width: 800px) {
 
-#contact-form label{
-    line-height: 2.7em;
-}
-
-#contact-form textarea{
-    min-height: 100px;
-    font-size: 14px;
-}
-
-.input-field{
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: var(--secondaryColor);
-    border-radius: 5px;
-    border: 1px solid var(--borderColor);
-    font-size: 14px;
-}
-
-#submit-btn{
-    margin-top: 10px;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #fff;
-    background-color: var(--buttonColor);
-    border: none;
-}
-
-@media screen and (max-width: 1200px){
-    .main-container{
-        width: 95%;
+    html, body {
+        height: 100%;
     }
-}
 
-@media screen and (max-width: 800px){
-    .intro-wrapper{
+    .s1, .s2 {
+        overflow: visible;
+    }
+
+    .s1 {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 1rem;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+
+    .nav-wrapper {
+        max-height: fit-content;
+    }
+
+    .main-container{
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .intro-wrapper {
+        padding-bottom: 2rem;
         grid-template-columns: 1fr;
         grid-template-areas:
             'nav-wrapper'
@@ -380,7 +354,25 @@ h6{font-size: 16px;}
         ;
     }
 
-    .right-column{
-        justify-content: center;
+    #preview {
+        width: 250px;
+    }
+
+    #preview-shadow {
+        width: 250px;
+    }
+
+    .left-column {
+        padding: 32px;
+    }
+
+    .right-column {
+        padding-left: 7%;
+    }
+
+    .about-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 16px 0px;
     }
 }
