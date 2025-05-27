@@ -315,6 +315,14 @@ p{font-size: 18px;}
     color: #4b5156;
 }
 
+.footer-copy {
+    font-size: .75rem;
+    color: hsl(228, 53%, 81%);
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    text-align: center;
+  }
+
 @media screen and (max-width: 800px) {
 
     html, body {
