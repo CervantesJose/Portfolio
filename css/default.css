@@ -261,7 +261,7 @@ p{font-size: 18px;}
 .about-wrapper{
     display: grid;
     grid-template-columns: repeat(1, minmax(400px, 1fr));
-    padding: 32px 0;
+    
 }
 
 #skills{
@@ -282,7 +282,7 @@ p{font-size: 18px;}
     grid-template-columns: repeat(auto-fit, 320px);
     gap: 16px;
     justify-content: center;
-    padding-bottom: 32px;
+    padding-bottom: 44px;
 }
 
 .post{
